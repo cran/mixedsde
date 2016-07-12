@@ -21,7 +21,7 @@ License: \tab GLP-2, GLP-3\cr
 \author{
 Charlotte Dion, Simone Hermann, Adeline Samson
 
-Maintainer: Charlotte Dion <charlotte.dion@imag.fr>
+Maintainer: Charlotte Dion <charlotte.dion1@gmail.com>
 }
 \references{
 See Bidimensional random effect estimation in mixed stochastic differential model, C. Dion and V. Genon-Catalot, \emph{Stochastic Inference for Stochastic Processes 2015, Springer Netherlands} \bold{1--28}
@@ -41,22 +41,22 @@ delta <- 0.1 # delta <- 0.001 and M <- 200 would yield better results!
 N <- floor(T/delta); sigma <- 0.01
 random <- c(1,2); density.phi <- 'gammainvgamma2'
 param<- c(1.8, 0.8, 8, 0.05);
-simu <- mixedsde.sim(M=M,T=T,N=N,model=model,random=random,
-  density.phi=density.phi,param=param,sigma=sigma, invariant = 1)
+simu <- mixedsde.sim(M = M, T = T, N = N, model = model, random = random,
+  density.phi = density.phi, param = param, sigma = sigma, invariant = 1)
 X <- simu$X ; phi <- simu$phi; times <- simu$times
 estim.method<- 'nonparam'
-estim <- mixedsde.fit(times=times, X=X, model=model, random=random, 
-   estim.method= 'nonparam')
+estim <- mixedsde.fit(times = times, X = X, model = model, random = random, 
+   estim.method = 'nonparam')
 outputsNP <- out(estim)
 
 summary(estim)
 print(estim)
 \dontrun{
 plot(estim)
-validation <- valid(estim, numj=floor(runif(1,1,M)))
+validation <- valid(estim)
 }
 estim.method<-'paramML'
-estim_param <- mixedsde.fit(times= times, X= X, model= model, random= random, 
+estim_param <- mixedsde.fit(times = times, X = X, model = model, random = random, 
 	estim.method = 'paramML')
 outputsP <- out(estim_param)
 
@@ -70,14 +70,15 @@ test2 <- pred(estim_param, invariant = 1)
 cutoff <- outputsNP$cutoff
 phihat <- outputsNP$estimphi
 phihat_trunc <- outputsNP$estimphi_trunc
+
 par(mfrow=c(1,2))
-plot.ts(phi[1,], phihat[1,], xlim=c(0, 15), ylim=c(0,15), pch=18); abline(0,1)
-points(phi[1,]*(1-cutoff), phihat[1,]*(1-cutoff), xlim=c(0, 20), ylim=c(0,20),
-   pch=18, col='red')
+plot.ts(phi[1,], phihat[1,], xlim = c(0, 15), ylim = c(0,15), pch = 18); abline(0,1)
+points(phi[1,]*(1-cutoff), phihat[1,]*(1-cutoff), xlim = c(0, 20), ylim = c(0,20),
+   pch = 18, col = 'red')
 abline(0,1)
-plot.ts(phi[2,], phihat[2,], xlim=c(0, 15), ylim=c(0,15),pch=18); abline(0,1)
-points(phi[2,]*(1-cutoff), phihat[2,]*(1-cutoff), xlim=c(0, 20), ylim=c(0,20),
-   pch=18, col='red')
+plot.ts(phi[2,], phihat[2,], xlim = c(0, 15), ylim=c(0,15),pch = 18); abline(0,1)
+points(phi[2,]*(1-cutoff), phihat[2,]*(1-cutoff), xlim = c(0, 20), ylim = c(0,20),
+   pch = 18, col = 'red')
 abline(0,1)
 
 
@@ -93,7 +94,7 @@ simu <- mixedsde.sim(M, T = T, N = N, model= model, random = random, fixed = fix
 X <- simu$X; phi <- simu$phi; times <- simu$times
 #plot(times, X[1,], ylim = range(X), type = 'l'); for(i in 2:M) lines(times, X[i,])
 
-estim_Bayes <- mixedsde.fit(times, X= X, model = model, random = random, 
+estim_Bayes <- mixedsde.fit(times, X = X, model = model, random = random, 
             estim.method = 'paramBayes', nMCMC = 100)  # nMCMC should be much larger
 plot(estim_Bayes)
 
