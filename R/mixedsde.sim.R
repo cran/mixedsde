@@ -99,14 +99,13 @@
 #' hist(phi)
 #' @references This function mixedsde.sim is based on the package sde, function sde.sim. See Simulation and Inference for stochastic differential equation, S.Iacus, \emph{Springer Series in Statistics 2008}
 #' Chapter 2
-#' @seealso \url{http://cran.r-project.org/package=sde}
+#' @seealso \url{https://cran.r-project.org/package=sde}
 #' 
 
 
 
 mixedsde.sim <- function(M, T, N = 100, model, random, fixed = 0, density.phi, param, sigma, t0 = 0, X0 = 0.01, 
     invariant = 0, delta = T/N, op.plot = 0, add.plot = FALSE) {
-    
     
     ## local sde.sim to sink undesired output away into a tempfile
     con <- file(tempfile(), open = "w")
@@ -167,10 +166,10 @@ mixedsde.sim <- function(M, T, N = 100, model, random, fixed = 0, density.phi, p
             for (j in 1:M) {
                 if (invariant == 1) {
                   X0 <- phi[1, j]/phi[2, j] + (sig/(sqrt(2 * phi[2, j]))) * rnorm(1)
-                  # suppressMessages(
+                   #suppressMessages(
                   X[j, ] <- sde.sim(T = T, X0 = X0, N = N, delta = delta, method = "EA", theta = c(phi[, j], 
                     sig), model = "OU")
-                  # )
+                  #)
                 }
                 if (invariant == 0) {
                   # suppressMessages(

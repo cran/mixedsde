@@ -1,4 +1,4 @@
-294d507f91429c1c30a3dd854c7208e5 *DESCRIPTION
+4e070feb81ee22c8a0782814123715d0 *DESCRIPTION
 58a986768cfac00cf92e68b4cb179a92 *NAMESPACE
 bb2a3bf8145228be04129465925032b2 *R/BayesianNormal.R
 4a0584917a992c5c68b8fe5bfc52490e *R/EstParamNormal.R
@@ -6,8 +6,8 @@ ebcb6a70983044c1e0ac013c58c38b2c *R/UV.R
 93d33607b7e8fd5082e2dafbe91fdc41 *R/bx.R
 fac8126404558ba42d9bb67692d4917f *R/eigenvaluesV.R
 020b5c2ef326232bf40acbbf22825481 *R/likelihoodNormal.R
-c6f01a1cc91fbf63c2f02531b6b40fba *R/mixedsde.fit.R
-812c765839a210de8e78ea2b10463a80 *R/mixedsde.sim.R
+c477208ee04faf1ca46d94321c5daec2 *R/mixedsde.fit.R
+a73c169fd5a72555b67e7bf5c2b6e6da *R/mixedsde.sim.R
 a962338a8bd421aa939d934d8bb45e72 *R/mixture.sim.R
 33db7899954e4ae38956402a7940c4b0 *R/simu.randomvariable.R
 64d8044c828fe4f354ab22b2ee045fa1 *README.md
@@ -29,8 +29,8 @@ ab1644a0772d0141b19a57ff0e81907e *man/dcCIR2.Rd
 a4c5740e213b7d57d3efc98dd001ca68 *man/likelihoodNormal.Rd
 c7afa4e91aec1242c359117b135a83a0 *man/likelihoodNormalestimfix.Rd
 698a22cb7c0a1c1cdade201a17293417 *man/mixedsde-package.Rd
-fed288d8975093d70e7213ae9019864b *man/mixedsde.fit.Rd
-5b079d41800bba14ac6fc00f51b8175b *man/mixedsde.sim.Rd
+e5edc66debeed4a03c4e149caa5dcd87 *man/mixedsde.fit.Rd
+c4efd0951482a93b783c59d21a31e729 *man/mixedsde.sim.Rd
 ead52186e8da8f6aa270f809cfc5c868 *man/mixture.sim.Rd
 067fec67ba23f3fa4641bc5eac9dbed9 *man/neuronal.data.Rd
 458e1340cb6d577aa5b03abd9bfef0e9 *man/out.Rd
