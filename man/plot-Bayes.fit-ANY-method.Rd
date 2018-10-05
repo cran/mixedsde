@@ -5,9 +5,9 @@
 \alias{plot,Bayes.fit,ANY-method}
 \title{Plot method for the Bayesian estimation class object}
 \usage{
-\S4method{plot}{Bayes.fit,ANY}(x, plot.priorMean = FALSE, reduced = FALSE,
-  style = c("chains", "acf", "density", "cred.int"), level = 0.05, true.phi,
-  newwindow = FALSE, ...)
+\S4method{plot}{Bayes.fit,ANY}(x, plot.priorMean = FALSE,
+  reduced = FALSE, style = c("chains", "acf", "density", "cred.int"),
+  level = 0.05, true.phi, newwindow = FALSE, ...)
 }
 \arguments{
 \item{x}{Bayes.fit class}

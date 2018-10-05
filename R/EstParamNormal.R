@@ -1,7 +1,7 @@
 #' Maximization Of The Log Likelihood In Mixed Stochastic Differential Equations
 #' 
 #' @description Maximization of the loglikelihood of the mixed SDE with Normal distribution of the random effects
-#'  \eqn{dXj(t)= (\alpha_j- \beta_j Xj(t))dt + \sigma a(Xj(t)) dWj(t)}, done with \code{\link[=mixedsde]{likelihoodNormal}}
+#'  \eqn{dXj(t)= (\alpha_j- \beta_j Xj(t))dt + \sigma a(Xj(t)) dWj(t)}, done with \code{likelihoodNormal}
 #' @param U matrix of M sufficient statistics U
 #' @param V list of the M sufficient statistics matrix V
 #' @param K number of times of observations

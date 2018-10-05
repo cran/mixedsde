@@ -7,9 +7,9 @@
 \usage{
 \S4method{pred}{Bayes.fit}(x, invariant = FALSE, level = 0.05,
   newwindow = FALSE, plot.pred = TRUE, plot.legend = TRUE, burnIn,
-  thinning, only.interval = TRUE, sample.length = 500, cand.length = 100,
-  trajectories = FALSE, ylim, xlab = "times", ylab = "X", col = 3,
-  lwd = 2, ...)
+  thinning, only.interval = TRUE, sample.length = 500,
+  cand.length = 100, trajectories = FALSE, ylim, xlab = "times",
+  ylab = "X", col = 3, lwd = 2, ...)
 }
 \arguments{
 \item{x}{Bayes.fit class}

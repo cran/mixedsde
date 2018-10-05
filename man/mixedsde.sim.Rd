@@ -4,9 +4,9 @@
 \alias{mixedsde.sim}
 \title{Simulation Of A Mixed Stochastic Differential Equation}
 \usage{
-mixedsde.sim(M, T, N = 100, model, random, fixed = 0, density.phi, param,
-  sigma, t0 = 0, X0 = 0.01, invariant = 0, delta = T/N, op.plot = 0,
-  add.plot = FALSE)
+mixedsde.sim(M, T, N = 100, model, random, fixed = 0, density.phi,
+  param, sigma, t0 = 0, X0 = 0.01, invariant = 0, delta = T/N,
+  op.plot = 0, add.plot = FALSE)
 }
 \arguments{
 \item{M}{number of trajectories}

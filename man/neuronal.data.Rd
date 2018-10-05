@@ -1,19 +1,27 @@
-
 \name{neuronal.data}
 \alias{neuronal.data}
+\docType{data}
 \title{
-  Trajectories Interspike Of A Single Neuron Of A Ginea Pig
+Trajectories Interspike Of A Single Neuron Of A Ginea Pig
 }
 \description{
-  The \code{neuronal.data} data has 240 measurements of the membrane potential in volts for one single neuron of a pig between the spikes, along time, with 2000 points for each. The step time is \eqn{delta= 0.00015} s. 
+ The \code{neuronal.data} data has 240 measurements of the membrane potential in volts for one single neuron of a pig between the spikes, along time, with 2000 points for each. The step time is \eqn{delta= 0.00015} s. 
 }
-\usage{
-neuronal.data
-}
+\usage{data("neuronal.data")}
 \format{
-This data frame has a list form of length 2. The first element in the matrix named \code{Xreal}. Each row is a trajectory, that one can model by a diffusion process with random effect. The realisation can be assumed independent. The second element is a vector of times of observations \code{times}
+ This data frame has a list form of length 2. The first element in the matrix named \code{Xreal}. Each row is a trajectory, that one can model by a diffusion process with random effect. The realisation can be assumed independent. The second element is a vector of times of observations \code{times}
 }
 
+\source{
+ The parameters of the stochastic leaky integrate-and-fire neuronal model.
+  Lansky, P., Sanda, P. and He, J. (2006).
+  \emph{Journal of Computational Neuroscience} Vol 21, \bold{211--223}
+}
+\references{
+ The parameters of the stochastic leaky integrate-and-fire neuronal model.
+  Lansky, P., Sanda, P. and He, J. (2006).
+  \emph{Journal of Computational Neuroscience} Vol 21, \bold{211--223}
+}
 \examples{
 model <- "OU"
 random <- c(1,2)
@@ -78,20 +86,4 @@ pred_Bayes1 <- pred(estim_Bayes)
 pred_Bayes2 <- pred(estim_Bayes, trajectories = TRUE)
 
 }
-
-\source{
-  The parameters of the stochastic leaky integrate-and-fire neuronal model.
-  Lansky, P., Sanda, P. and He, J. (2006).
-  \emph{Journal of Computational Neuroscience} Vol 21, \bold{211--223}
-}
-\references{
-  The parameters of the stochastic leaky integrate-and-fire neuronal model.
-  Lansky, P., Sanda, P. and He, J. (2006).
-  \emph{Journal of Computational Neuroscience} Vol 21, \bold{211--223}
-}
-
-
-
-
-
-\keyword{data}
+\keyword{datasets}

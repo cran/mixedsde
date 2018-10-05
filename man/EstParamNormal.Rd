@@ -27,5 +27,5 @@ EstParamNormal(U, V, K, random, estim.fix, fixed = 0)
 }
 \description{
 Maximization of the loglikelihood of the mixed SDE with Normal distribution of the random effects
- \eqn{dXj(t)= (\alpha_j- \beta_j Xj(t))dt + \sigma a(Xj(t)) dWj(t)}, done with \code{\link[=mixedsde]{likelihoodNormal}}
+ \eqn{dXj(t)= (\alpha_j- \beta_j Xj(t))dt + \sigma a(Xj(t)) dWj(t)}, done with \code{likelihoodNormal}
 }

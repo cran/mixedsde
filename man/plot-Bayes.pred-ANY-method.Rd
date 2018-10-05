@@ -5,8 +5,9 @@
 \alias{plot,Bayes.pred,ANY-method}
 \title{Plot method for the Bayesian prediction class object}
 \usage{
-\S4method{plot}{Bayes.pred,ANY}(x, newwindow = FALSE, plot.legend = TRUE,
-  ylim, xlab = "times", ylab = "X", col = 3, lwd = 2, ...)
+\S4method{plot}{Bayes.pred,ANY}(x, newwindow = FALSE,
+  plot.legend = TRUE, ylim, xlab = "times", ylab = "X", col = 3,
+  lwd = 2, ...)
 }
 \arguments{
 \item{x}{Bayes.fit class}
